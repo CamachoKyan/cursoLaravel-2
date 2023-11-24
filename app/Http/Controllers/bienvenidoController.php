@@ -7,20 +7,18 @@ use Illuminate\Http\Request;
 class bienvenidoController extends Controller
 {
     public function bienvenido(){
-        $nombre = "Luis";
-        $alumnos =['Ximena', 'Perez', 'Sergio', 'Evelyn', 'Dani', 'Juan', 'David', 'Kyan', 'Eitan', 'Adrian', 'Leo'];
-        $datos = array(['nombre' => 'Ximena', 'edad' => 17, 'turno' => 'Vespertino'],
-                       ['nombre' => 'Perez', 'edad' => 20, 'turno' => 'Matutino'],
-                       ['nombre' => 'Sergio', 'edad' => 15, 'turno' => 'Nocturno'],
-                       ['nombre' => 'Evelyn', 'edad' => 16, 'turno' => 'Vespertino'],
-                       ['nombre' => 'Dani', 'edad' => 18, 'turno' => 'Matutino'],
-                       ['nombre' => 'Juan', 'edad' => 24, 'turno' => 'Matutino'],
-                       ['nombre' => 'david', 'edad' => 28, 'turno' => 'Vespertino']);
+        $nombre = "Kyan";
+
+        $alumnos = ['Skibidi','Garten Of','Toilet','Ban Ban'];
+
+        $datos = array(['nombre' => 'Skibidi', 'edad'=>17, 'turno' => 'Vespertino'],
+                       ['nombre' => 'Garten Of', 'edad'=>16, 'turno' => 'Matutino'],
+                       ['nombre' => 'Toilet', 'edad'=>15, 'turno' => 'Vespertino'],
+                       ['nombre' => 'Ban Ban', 'edad'=>14, 'turno' => 'Matutino']);
 
         return view('bienvenido', compact('nombre', 'alumnos', 'datos'));
+        
     }
 
-    public function inicio(){
-        return view('inicio');
-    }
+    
 }

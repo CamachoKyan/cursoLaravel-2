@@ -1,17 +1,28 @@
 <?php
-
-use App\Http\Controllers\AlumnoController;
 use App\Http\Controllers\bienvenidoController;
+use App\Http\Controllers\AlumnoController;
 use Illuminate\Support\Facades\Route;
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider and all of them will
+| be assigned to the "web" middleware group. Make something great!
+|
+*/
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-route::get('/bienvenido', [bienvenidoController::class, 'bienvenido']);
 
-route::get('/inicio', [bienvenidoController::class, 'inicio']);
+route::get('/bienvenido',[bienvenidoController::class,'bienvenido']);
 
-route::get('/alumnos', [AlumnoController::class, 'alumnos']);
+route::get('/inicio',[AlumnoController::class,'inicio']);
+
+route::get('/alumno',[AlumnoController::class,'alumnos']);
 
 
